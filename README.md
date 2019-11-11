@@ -15,12 +15,21 @@ $ node your-appium-test.js
 Set up instructions :
 
 1. Download and install IntelliJ Idea Community version
+
 2. Clone the below repository in IntelliJ Idea  : https://github.com/vinodpasalkar/testscenerio
+(Just clone this project in InteliJ idea community Edition
+and Go to Menu > Build > Build Project
+Once the build is completed/compiled successfully)
+
 3. Ensure you have maven installed in your system - command from terminal -> brew install maven
 4. Install below IntelliJ plugins by going to below navigation
 5. IntelliJ Idea > Menu > IntelliJ Idea > Preferences > Plugins > Marketplace
 6. Search below plugins one by one and install them
  Cucumber for java , Gherkin , Jbehave BDD Plugin , Jbehave Support
+7.Ensure 'adb devices' commands works on your terminal and it gives the unique device id , please put it as value for appium.deviceName parameter in the dependecies below
+8.Check android version of your mobile device or emulator and put its value as appium.platformVersion in the dependecies below
+9. Download the .apk from the folder structure and provide the file path as value for appium.app in the dependecies below
+
 
 Running your first test
 The platform details can be updated in serenity.properties file.
@@ -41,17 +50,12 @@ appium.disableWindowAnimation = True```
 
 
 
-Initial commit for first test case 
-Just clone this project in InteliJ idea community Edition
-and Go to Menu > Build > Build Project
-Once the build is completed/compiled successfully
-
 Execution commands
 The Build is generated using Maven and The framework supports execution on 3 environments(production, beta(default), staging), the same has been configured as profile.
 
 Go to Terminal in the bottom of the IDE and execute below command to run the test case
 
-mvn clean verify -Dmetafilter="+scenarios name"
+mvn clean verify -Dmetafilter="+scenario name"
 
 For e.g. 
 In our framework to execute the DenyPermissionScenario for ContactsApp
@@ -63,8 +67,6 @@ mvn clean verify -Dmetafilter="+DenyPermissionScenario"
 Meta filtering the stories/scenario
 mvn clean verify -Dmetafilter="+SmokeTest" -- This command will run the scenarios with the tag, "SmokeTest"
 This way we can use this on CI-CD by tagging the test case under the different tags like regression , smoke , sanity etc...
-
-
   
 To see the Results after execution
   
