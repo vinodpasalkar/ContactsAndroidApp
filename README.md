@@ -12,6 +12,19 @@ $ npm install wd          get appium client
 $ appium &                start appium
 $ node your-appium-test.js
 
+Set up instructions :
+
+1. Download and install IntelliJ Idea Community version
+2. Clone the below repository in IntelliJ Idea  : https://github.com/vinodpasalkar/testscenerio
+3. Ensure you have maven installed in your system - command from terminal -> brew install maven
+4. Install below IntelliJ plugins by going to below navigation
+5. IntelliJ Idea > Menu > IntelliJ Idea > Preferences > Plugins > Marketplace
+6. Search below plugins one by one and install them
+ Cucumber for java
+ Gherkin
+ Jbehave BDD Plugin
+ Jbehave Support
+
 Running your first test
 The platform details can be updated in serenity.properties file.
 
