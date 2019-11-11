@@ -20,15 +20,12 @@ Set up instructions :
 4. Install below IntelliJ plugins by going to below navigation
 5. IntelliJ Idea > Menu > IntelliJ Idea > Preferences > Plugins > Marketplace
 6. Search below plugins one by one and install them
- Cucumber for java
- Gherkin
- Jbehave BDD Plugin
- Jbehave Support
+ Cucumber for java , Gherkin , Jbehave BDD Plugin , Jbehave Support
 
 Running your first test
 The platform details can be updated in serenity.properties file.
 
-Android dependencies
+```Android dependencies
 appium.automationName=uiautomator2
 appium.platformName = Android
 appium.platformVersion = 9
@@ -40,7 +37,7 @@ appium.noReset = True
 appium.newCommandTimeout = 6000
 appium.waitForQuiescence = false
 appium.useNewWDA = true
-appium.disableWindowAnimation = True
+appium.disableWindowAnimation = True```
 
 
 
