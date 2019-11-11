@@ -1,0 +1,26 @@
+<story path="stories/WeatherAPIAutomation/WeatherAPI.story" title="">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">user</inOrderTo>
+  <asA keyword="I want to">perform an action</asA>
+  <iWantTo keyword="So that">I can achieve a business goal</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Get maximum and minimum temperature in the city">
+<meta>
+<property keyword="@" name="MaxMinTemperatureInCity" value=""/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I have a weather API</step>
+<step>When I get weather for &lt;city&gt;</step>
+<step>Then the maximum and minimum temperature are shown for &lt;city&gt;</step>
+<parameters>
+<names><name>city</name></names>
+<values><value>Los Angeles</value></values>
+</parameters>
+
+<example keyword="Example:">{city=Los Angeles, MaxMinTemperatureInCity=}</example>
+<step outcome="successful">Given I have a weather API</step>
+<step outcome="successful">When I get weather for <parameter>Los Angeles</parameter></step>
+<step outcome="successful">Then the maximum and minimum temperature are shown for <parameter>Los Angeles</parameter></step>
+</examples>
+</scenario>
+</story>
