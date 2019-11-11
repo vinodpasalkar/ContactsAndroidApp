@@ -2,10 +2,10 @@ package net.sampletestautomation.requests.city;
 
 public class Main{
 	private double temp;
-	private float tempMin;
+	private double tempMin;
 	private int humidity;
 	private int pressure;
-	private float tempMax;
+	private double tempMax;
 
 	public void setTemp(double temp){
 		this.temp = temp;
@@ -15,12 +15,12 @@ public class Main{
 		return temp;
 	}
 
-	public void setTempMin(float tempMin){
+	public void setTempMin(double tempMin){
 		this.tempMin = tempMin;
 	}
 
-	public String getTempMin(){
-		return String.valueOf(tempMin);
+	public double getTempMin(){
+		return tempMin;
 	}
 
 	public void setHumidity(int humidity){
@@ -39,12 +39,12 @@ public class Main{
 		return pressure;
 	}
 
-	public void setTempMax(float tempMax){
+	public void setTempMax(double tempMax){
 		this.tempMax = tempMax;
 	}
 
-	public String getTempMax(){
-		return String.valueOf(tempMax);
+	public double getTempMax(){
+		return tempMax;
 	}
 
 	@Override

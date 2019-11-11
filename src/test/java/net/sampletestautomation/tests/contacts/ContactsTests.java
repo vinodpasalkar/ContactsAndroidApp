@@ -22,4 +22,12 @@ public class ContactsTests {
     public void viewContact(String name) {
         contactsPage.viewContactOnUI(name);
     }
+
+    public void countContactNumbers() {
+        contactsPage.countTotalContactsOnUI();
+    }
+
+    public void viewContactInDetail() {
+        contactsPage.countAndViewContactOneByOne();
+    }
 }

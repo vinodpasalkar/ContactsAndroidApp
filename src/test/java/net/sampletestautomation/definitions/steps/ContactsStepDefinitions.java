@@ -19,6 +19,15 @@ public class ContactsStepDefinitions {
         contactsTests.tapOnPermission(permission);
     }
 
+    @When("I count the total number of contacts")
+    public void countContacts( ){
+        contactsTests.countContactNumbers();
+    }
+
+    @When("I view a contact $name")
+    public void viewContact(String name ){
+        contactsTests.viewContact(name);
+    }
 
     @Then("message is displayed accordingly for $permission")
     public void verifyMessage(String permission){
@@ -26,7 +35,12 @@ public class ContactsStepDefinitions {
     }
 
     @Then("the contact $name should be shown successfully")
-    public void viewContact(String name){
+    public void verifyContact(String name){
         contactsTests.viewContact(name);
+    }
+
+    @Then("I view a contact one by one")
+    public void verifyContact(){
+        contactsTests.viewContactInDetail();
     }
 }

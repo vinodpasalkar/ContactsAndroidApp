@@ -45,7 +45,13 @@ public class ContactsPage extends MobilePageObject {
 
     String contact = "//android.widget.TextView[contains(@text,\"name\")]";
 
+    String totalContacts = "";
+
     private WebElement contactView;
+
+    int contactTotal = 0;
+
+    int i = 0;
 
     @Step("Step {0}")
     public void generateStep(String s){
@@ -97,8 +103,7 @@ public class ContactsPage extends MobilePageObject {
 
     public void viewContactOnUI(String name) {
         contact = contact.replace("name",name);
-        contactView = driver.findElement(By.xpath(contact));
-        if(contactView.isDisplayed()){
+        if(driver.findElements(By.xpath(contact)).size() > 0){
             System.out.println("Contact"+name+"  is visible on the screen successfully.");
         }
         else if (scrollOnScreen(name))
@@ -106,7 +111,7 @@ public class ContactsPage extends MobilePageObject {
             System.out.println("Contact"+name+"  is visible on the screen successfully.");
         }
         else{
-            Assert.fail("Contact" + name + "  is not visible on the screen successfully.");
+            Assert.fail("Contact" + name + "  doesnt exits.");
         }
     }
 
@@ -124,5 +129,36 @@ public class ContactsPage extends MobilePageObject {
             flag = true;
         }
         return flag;
+    }
+
+    public void countTotalContactsOnUI() {
+        SeeNext:
+        do{
+            i++;
+            totalContacts = "//android.support.v7.widget.RecyclerView/android.view.ViewGroup[index]/android.widget.TextView[1]";
+            totalContacts = totalContacts.replace("index",String.valueOf(i));
+
+            if(driver.findElements(By.xpath(totalContacts)).size() >0){
+                contactTotal= contactTotal+1;
+                continue SeeNext;
+            }
+            else{
+                scrollOnScreen(totalContacts);
+                if(driver.findElements(By.xpath(totalContacts)).size() >0){
+                    contactTotal= contactTotal+1;
+                    continue SeeNext;
+                }
+                else{
+                    break ;
+                }
+            }
+
+        }while(i>0);
+
+        System.out.println("Number of contacts present in the app are "+contactTotal);
+        }
+
+    public void countAndViewContactOneByOne() {
+        //Not yet implemented
     }
 }

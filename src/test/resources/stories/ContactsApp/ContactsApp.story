@@ -41,34 +41,34 @@ When I add a new contact <Name> <Number>
 Then the contact should be added successfully
 Examples:
 |Name  |Number        |
-|Vinod | 07440449447 |
+|Vinod | 07440449447  |
 
 Scenario: User views a contact.
 !-- This scenarios is not automated as create contact feature is not available
 Meta:
-@AddNewContact
+@ViewExistingContact
 Given the contacts App is launched
 When I view a contact <Name>
-Then the contact should be shown successfully
+Then the contact <Name> should be shown successfully
 Examples:
 |Name  |
-|Vinod |
+|Test2 |
 
 Scenario: User views a contact by scrooling to it.
 !-- This scenarios is not automated as create contact feature is not available but scrolling logic is written inside the step definition
 Meta:
-@AddNewContact
+@ViewExistingContactByScroll
 Given the contacts App is launched
 When I view a contact <Name>
 Then the contact <Name> should be shown successfully
 Examples:
 |Name   |
-|Pramod |
+|Vinod |
 
 Scenario: User counts the total number of contacts and views them one by one.
-!-- This scenarios is not automated as create contact feature is not available but scrolling logic is written inside the step definition
+
 Meta:
-@AddNewContact
+@CountContactsAndViewOneByOne
 Given the contacts App is launched
 When I count the total number of contacts
 Then I view a contact one by one
@@ -76,7 +76,7 @@ Then I view a contact one by one
 Scenario: User checks whether the contact has imgae or not
 !-- This scenarios is not automated as create contact feature is not available
 Meta:
-@AddNewContact
+@CheckContactImage
 Given the contacts App is launched
 When I view a contact <Name>
 Then I identify whether it has image or not
