@@ -1,11 +1,15 @@
 ContactsAppTestcases
 
-This repo consists a customized automation framework for executing the test cases on Contacts app, the framework uses Serenity BDD libraries for integrating Jbehave, REST-Assured, Selenium and Appium
+This repo consists a customized automation framework for executing the test cases on Contacts app, the framework uses Serenity BDD libraries for integrating Jbehave, REST-Assured, Selenium and Appium.
 
-Install java 
+Install java
+
 Install Maven
+
 Install brew  or home-brew: 
+
 Pre-requisites Installing Appium 
+
 The below commands would install all the appium dependenices to the system
 
 $ brew install node get node.js 
