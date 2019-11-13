@@ -2,7 +2,7 @@ ContactsAppTestcases
 
 This repo consists a customized automation framework for executing the test cases on Contacts app, the framework uses Serenity BDD libraries for integrating Jbehave, REST-Assured, Selenium and Appium.
 
-Install java
+Please Install java version 8
 
 Install Maven
 
