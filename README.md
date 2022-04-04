@@ -73,7 +73,7 @@ Open index.html file in any browser to see the results.
 Sample Report Snapshots:
 ![Report](https://github.com/vinodpasalkar/testscenerio/blob/master/Reports/Sample%20Snapshots/screencapture-file-Users-vinod-pasalkar-Downloads-testscenerio-master-Reports-report-09-11-2019-17-57-13-index-html-2019-11-12-15_29_18.png)
 
-!https://github.com/vinodpasalkar/testscenerio/blob/master/Reports/Sample%20Snapshots/screencapture-file-Users-vinod-pasalkar-Downloads-testscenerio-master-Reports-report-09-11-2019-17-57-13-799b36dc7c2f7b1b95d660b9431429f2514b1c9578c7b2e5ace9344bf50c1816-html-2019-11-12-15_28_41.png
+![Snapshot](https://github.com/vinodpasalkar/testscenerio/blob/master/Reports/Sample%20Snapshots/screencapture-file-Users-vinod-pasalkar-Downloads-testscenerio-master-Reports-report-09-11-2019-17-57-13-799b36dc7c2f7b1b95d660b9431429f2514b1c9578c7b2e5ace9344bf50c1816-html-2019-11-12-15_28_41.png)
   
 I have used serenity framework here.
 
